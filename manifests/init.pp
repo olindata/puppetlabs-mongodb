@@ -35,11 +35,11 @@ class mongodb (
   $location        = '',
   $packagename     = undef,
   $servicename     = $mongodb::params::service,
-  $logpath         = '/var/log/mongo/mongod.log',
+  $logpath         = '/var/log/mongo/mongodb.log',
   $logappend       = true,
   $mongofork       = true,
   $port            = '27017',
-  $dbpath          = '/var/lib/mongo',
+  $dbpath          = '/var/lib/mongodb',
   $nojournal       = undef,
   $cpu             = undef,
   $noauth          = undef,
@@ -61,7 +61,8 @@ class mongodb (
   $only            = undef,
   $master          = undef,
   $source          = undef,
-  $replica_set     = undef
+  $replica_set     = undef,
+  $pidfilepath     = '/var/lib/mongodb/mongod.lock',
 ) inherits mongodb::params {
 
   if $enable_10gen {
