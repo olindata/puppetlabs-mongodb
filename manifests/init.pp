@@ -62,7 +62,7 @@ class mongodb (
   $master          = undef,
   $source          = undef,
   $replica_set     = undef,
-  $pidfilepath     = '/var/lib/mongodb/mongod.lock',
+  $pidfilepath     = '/var/run',
 ) inherits mongodb::params {
 
   if $enable_10gen {
